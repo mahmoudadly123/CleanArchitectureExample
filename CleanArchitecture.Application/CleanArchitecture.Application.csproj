@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Validation\FluentValidation\Validators\LeaveAllocation\**" />
+    <Compile Remove="Validation\FluentValidation\Validators\LeaveRequest\**" />
+    <Compile Remove="Validation\FluentValidation\Validators\LeaveType\**" />
+    <EmbeddedResource Remove="Validation\FluentValidation\Validators\LeaveAllocation\**" />
+    <EmbeddedResource Remove="Validation\FluentValidation\Validators\LeaveRequest\**" />
+    <EmbeddedResource Remove="Validation\FluentValidation\Validators\LeaveType\**" />
+    <None Remove="Validation\FluentValidation\Validators\LeaveAllocation\**" />
+    <None Remove="Validation\FluentValidation\Validators\LeaveRequest\**" />
+    <None Remove="Validation\FluentValidation\Validators\LeaveType\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Newtonsoft.Json" />
+  </ItemGroup>
+
+</Project>

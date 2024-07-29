@@ -1,0 +1,34 @@
+﻿using CleanArchitecture.Application.ObjectMapping.AutoMapper.Abstract;
+using CleanArchitecture.Application.ObjectMapping.AutoMapper.Dtos.Tax;
+
+namespace CleanArchitecture.Application.ObjectMapping.AutoMapper.Dtos.OrderItem;
+
+public class ViewOrderItemDto:BaseDto
+{
+    public int Id { get; set; }
+
+    public string Description { get; set; }
+
+    public decimal UnitPrice { get; set; }
+
+    public decimal Quantity { get; set; }
+
+    public decimal AdditionsValue { get; set; }
+    public decimal AdditionsPercent { get; set; }
+
+    public decimal TaxesValue { get; set; }
+    public decimal TaxesPercent { get; set; }
+
+
+    public decimal DiscountValue { get; set; }
+    public decimal DiscountPercent { get; set; }
+
+    public decimal SubTotal { get; set; }
+
+    public decimal Total { get; set; }
+
+    public List<ViewTaxDto> ItemTaxes { get; set; }
+
+    public int OrderId { get; set; }
+
+}
